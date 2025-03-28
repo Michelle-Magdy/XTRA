@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1400px;
+  margin: 0;
+  padding: 0 15px;
+  height: 100px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  right: -145px;
+  top: 15px;
+}
+.Head {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-image: url(https://xtratheme.com/interior/wp-content/uploads/sites/47/2018/05/brd.jpg);
+  padding-bottom: 63px;
+  border-color: #f4f4f4;
+}
+.page-header {
+  color: aliceblue;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  top: 95px;
+  font-size: 34px;
+}
+
+.Head .container nav .main-menu li a {
+  color: aliceblue;
+  text-decoration: none;
+  position: relative;
+}
+
+.Head .container nav .main-menu li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+
+.Head .container nav .main-menu li a:hover::before {
+  width: 20px;
+}
+
+.Head .container nav .main-menu li a:hover {
+  color: #ffcc00;
+}
+.Head .container .logo img {
+  width: 100px;
+  height: 100px;
+}
+.Head .container .logo {
+  display: flex;
+}
+.Head .container nav .main-menu {
+  display: flex;
+  margin-right: 50px;
+}
+.Head .container nav .main-menu li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+/*first and second container*/
+.first-container,
+.second-container {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
+.first-container .left-section,
+.second-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-direction: column;
+  width: 60%;
+}
+
+.first-container .left-section .title,
+.second-container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.first-container .left-section .title i,
+.second-container .title i {
+  background-color: #ffcc00;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.first-container .left-section .title p,
+.second-container .title p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.first-container .left-section .description,
+.second-container .description {
+  color: #9c9c9c;
+  font-size: 18px;
+}
+
+.first-container .left-section .questions-container,
+.second-container .questions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.first-container .left-section .questions-container .question-wrapper,
+.second-container .questions-container .question-wrapper {
+  width: 90%;
+  position: relative;
+}
+
+.first-container .left-section .questions-container .question,
+.second-container .questions-container .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #a4a4a4;
+  font-family: sans-serif;
+  width: 100%;
+  cursor: pointer;
+}
+
+.first-container .left-section .questions-container .question p,
+.second-container .questions-container .question p {
+  font-size: 24px;
+}
+
+.first-container .left-section .questions-container .question .caret,
+.second-container .questions-container .question .caret {
+  width: 0;
+  height: 0;
+  border-top: 8px solid black;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+}
+
+.first-container .left-section .questions-container .answer,
+.second-container .questions-container .answer {
+  width: 100%;
+  padding: 0px;
+  border: 2px solid #a4a4a4;
+  font-family: sans-serif;
+  opacity: 0;
+  max-height: 0;
+  color: #a4a4a4;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+.first-container .left-section .questions-container .question:hover,
+.second-container .questions-container .question:hover {
+  background-color: #ffcc00;
+}
+
+.first-container .left-section .questions-container .question:hover ~ .answer,
+.second-container .questions-container .question:hover ~ .answer {
+  border: 2px solid #ffcc00;
+  height: fit-content;
+  opacity: 1;
+  padding: 20px;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.first-container .left-section .questions-container .question:hover .caret,
+.second-container .questions-container .question:hover .caret {
+  border-top: 0px solid black;
+  border-bottom: 8px solid black;
+}
+
+/*first-contianer right section*/
+.first-container .right-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-direction: column;
+  width: 35%;
+  height: 570px;
+}
+
+.first-container .right-section .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.first-container .right-section .title p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.first-container .right-section .title i {
+  background-color: #ffcc00;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.first-container .right-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.first-container .right-section form input,
+.first-container .right-section form textarea {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid #ffcc00;
+}
+
+.first-container .right-section form button {
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.first-container .right-section form button:hover {
+  background-color: #ffcc00;
+}
+
+/*Footer*/
+
+footer {
+  height: 70vh;
+  width: 100%;
+  background-color: #ffcc00;
+  display: flex;
+  margin-top: 150px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+footer .img-wrapper {
+  position: absolute;
+  top: -35%;
+  background-color: black;
+  width: 200px;
+  height: 300px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+footer .img-wrapper img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-links .link-wrapper {
+  color: white;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.footer-links .link-wrapper:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.footer-links .link-wrapper i {
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.footer-links .link-wrapper:hover i {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+}
+
+.copy-rights {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.copy-rights p {
+  font-size: 18px;
+  color: #a8a8a8;
+}
